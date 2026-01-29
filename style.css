@@ -1284,16 +1284,22 @@ button {
 @media screen and (max-width: 992px) {
   .team__card {
     flex-direction: column;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
   }
   
   .team__photo {
     width: 100%;
     min-width: 100%;
+    max-width: 100%;
     height: 300px;
   }
   
   .team__info {
     padding: 2rem;
+    width: 100%;
+    max-width: 100%;
   }
   
   .team__name {
@@ -1306,16 +1312,72 @@ button {
 }
 
 @media screen and (max-width: 576px) {
+  .team {
+    padding: 4rem 0;
+  }
+
+  .team__carousel {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .team__track {
+    width: 100%;
+  }
+
+  .team__card {
+    flex-direction: column;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+
   .team__photo {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
     height: 250px;
   }
   
   .team__info {
     padding: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .team__name {
+    font-size: 1.25rem;
+  }
+
+  .team__specialty {
+    font-size: 0.9rem;
   }
   
   .team__bio {
     font-size: var(--small-font-size);
+    line-height: 1.6;
+  }
+
+  .team__cro {
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .team__controls {
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .team__btn {
+    width: 40px;
+    height: 40px;
+    font-size: 0.875rem;
+  }
+
+  .team__dot {
+    width: 10px;
+    height: 10px;
   }
 }
 
