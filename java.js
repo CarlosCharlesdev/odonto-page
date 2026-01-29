@@ -99,6 +99,140 @@ function scrollActive() {
 }
 window.addEventListener("scroll", scrollActive);
 
+/*==================== TEAM CAROUSEL ====================*/
+class TeamCarousel {
+  constructor() {
+    this.track = document.getElementById("teamTrack");
+    this.cards = document.querySelectorAll(".team__card");
+    this.dots = document.querySelectorAll(".team__dot");
+    this.prevBtn = document.querySelector(".team__btn--prev");
+    this.nextBtn = document.querySelector(".team__btn--next");
+    this.currentIndex = 0;
+    this.autoPlayInterval = null;
+    this.autoPlayDelay = 15000; // 15 seconds
+
+    if (this.track && this.cards.length > 0) {
+      this.init();
+    }
+  }
+
+  init() {
+    this.calculateCardsPerView();
+    this.bindEvents();
+    this.autoPlay();
+    this.updateDots();
+
+    // Recalculate on resize
+    window.addEventListener("resize", () => {
+      this.calculateCardsPerView();
+      this.goToSlide(this.currentIndex);
+    });
+  }
+
+  calculateCardsPerView() {
+    // Always show 1 card at a time in the new horizontal layout
+    this.cardsPerView = 1;
+    this.maxIndex = this.cards.length - 1;
+  }
+
+  bindEvents() {
+    if (this.prevBtn) {
+      this.prevBtn.addEventListener("click", () => {
+        this.prevSlide();
+        this.resetAutoPlay();
+      });
+    }
+
+    if (this.nextBtn) {
+      this.nextBtn.addEventListener("click", () => {
+        this.nextSlide();
+        this.resetAutoPlay();
+      });
+    }
+
+    this.dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        this.goToSlide(index);
+        this.resetAutoPlay();
+      });
+    });
+
+    // Touch/swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    this.track.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    this.track.addEventListener("touchend", (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      this.handleSwipe(touchStartX, touchEndX);
+    });
+  }
+
+  handleSwipe(startX, endX) {
+    const threshold = 50;
+    const diff = startX - endX;
+
+    if (Math.abs(diff) > threshold) {
+      if (diff > 0) {
+        this.nextSlide();
+      } else {
+        this.prevSlide();
+      }
+      this.resetAutoPlay();
+    }
+  }
+
+  goToSlide(index) {
+    // Clamp index to valid range
+    this.currentIndex = Math.max(0, Math.min(index, this.maxIndex));
+
+    // Use percentage for more reliable positioning
+    const offset = this.currentIndex * 100;
+
+    this.track.style.transform = `translateX(-${offset}%)`;
+    this.updateDots();
+  }
+
+  nextSlide() {
+    if (this.currentIndex >= this.maxIndex) {
+      this.goToSlide(0); // Loop back to start
+    } else {
+      this.goToSlide(this.currentIndex + 1);
+    }
+  }
+
+  prevSlide() {
+    if (this.currentIndex <= 0) {
+      this.goToSlide(this.maxIndex); // Loop to end
+    } else {
+      this.goToSlide(this.currentIndex - 1);
+    }
+  }
+
+  updateDots() {
+    this.dots.forEach((dot, index) => {
+      dot.classList.remove("active");
+      if (index === this.currentIndex) {
+        dot.classList.add("active");
+      }
+    });
+  }
+
+  autoPlay() {
+    this.autoPlayInterval = setInterval(() => {
+      this.nextSlide();
+    }, this.autoPlayDelay);
+  }
+
+  resetAutoPlay() {
+    clearInterval(this.autoPlayInterval);
+    this.autoPlay();
+  }
+}
+
 /*==================== TESTIMONIALS SLIDER ====================*/
 class TestimonialSlider {
   constructor() {
@@ -454,6 +588,9 @@ window.addEventListener("unhandledrejection", (e) => {
 
 /*==================== INITIALIZE ALL COMPONENTS ====================*/
 document.addEventListener("DOMContentLoaded", () => {
+  // Initialize team carousel
+  new TeamCarousel();
+
   // Initialize testimonial slider
   new TestimonialSlider();
 
@@ -493,5 +630,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("scroll", debouncedScroll);
 
-  console.log("OdontoPrime - Landing Page Initialized");
+  console.log("OFFICEDENTE - Landing Page Initialized");
 });
