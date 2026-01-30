@@ -450,79 +450,64 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
       <div class="section-container">
-        <div class="contact-wrapper">
-          <div class="contact-left">
-            <div class="section-label">
-              <div class="label-line"></div>
-              <span>Entre em contato</span>
-            </div>
-            
-            <h2 class="section-heading">
-              Vamos cuidar do seu
-              <span class="text-gold">sorriso</span>
-            </h2>
-            
-            <p class="section-description">
-              Agende sua consulta e descubra como podemos transformar seu sorriso
-            </p>
-            
-            <div class="contact-info-list">
-              <div class="contact-info-item">
-                <div class="info-icon">
-                  <i class="fas fa-phone"></i>
-                </div>
-                <div class="info-content">
-                  <span class="info-label">Telefone</span>
-                  <a href="tel:+556993282228" class="info-value">+55 69 9328-2228</a>
-                </div>
+        <div class="contact-content">
+          <div class="section-label">
+            <div class="label-line"></div>
+            <span>Entre em contato</span>
+          </div>
+          
+          <h2 class="section-heading">
+            Vamos cuidar do seu
+            <span class="text-gold">sorriso</span>
+          </h2>
+          
+          <p class="section-description">
+            Agende sua consulta e descubra como podemos transformar seu sorriso
+          </p>
+          
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="info-icon">
+                <i class="fas fa-phone"></i>
               </div>
-              
-              <div class="contact-info-item">
-                <div class="info-icon">
-                  <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="info-content">
-                  <span class="info-label">Endereço</span>
-                  <span class="info-value">R. Duque de Caxias, 755<br>Porto Velho - RO</span>
-                </div>
-              </div>
-              
-              <div class="contact-info-item">
-                <div class="info-icon">
-                  <i class="fas fa-clock"></i>
-                </div>
-                <div class="info-content">
-                  <span class="info-label">Horário</span>
-                  <span class="info-value">Sáb: 9h-20h | Dom: Agendamento</span>
-                </div>
+              <div class="info-content">
+                <span class="info-label">Telefone</span>
+                <a href="tel:+556993282228" class="info-value">+55 69 9328-2228</a>
               </div>
             </div>
             
-            <div class="emergency-box">
-              <div class="emergency-icon">
-                <i class="fas fa-ambulance"></i>
+            <div class="contact-info-item">
+              <div class="info-icon">
+                <i class="fas fa-map-marker-alt"></i>
               </div>
-              <div class="emergency-content">
-                <h4>Emergência 24h</h4>
-                <p>Atendimento disponível a qualquer momento</p>
-                <a href="https://wa.me/556993282228" class="emergency-btn">
-                  <i class="fab fa-whatsapp"></i>
-                  Chamar agora
-                </a>
+              <div class="info-content">
+                <span class="info-label">Endereço</span>
+                <span class="info-value">R. Duque de Caxias, 755<br>Porto Velho - RO</span>
+              </div>
+            </div>
+            
+            <div class="contact-info-item">
+              <div class="info-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="info-content">
+                <span class="info-label">Horário</span>
+                <span class="info-value">Sáb: 9h-20h | Dom: Agendamento</span>
               </div>
             </div>
           </div>
           
-          <div class="contact-right">
-            <div class="map-wrapper">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.2690541689794!2d-63.90639453386841!3d-8.760736921980921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92325cd9871aaaab%3A0x8c1462d80075a1f1!2sOfficedente!5e0!3m2!1spt-BR!2sbr!4v1769647875311!5m2!1spt-BR!2sbr"
-                width="100%" 
-                height="100%" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-              </iframe>
+          <div class="emergency-box">
+            <div class="emergency-icon">
+              <i class="fas fa-ambulance"></i>
+            </div>
+            <div class="emergency-content">
+              <h4>Emergência 24h</h4>
+              <p>Atendimento disponível a qualquer momento</p>
+              <a href="https://wa.me/556993282228" class="emergency-btn">
+                <i class="fab fa-whatsapp"></i>
+                Chamar agora
+              </a>
             </div>
           </div>
         </div>
@@ -570,7 +555,7 @@
             <h4>Contato</h4>
             <ul>
               <li><i class="fas fa-phone"></i> +55 69 9328-2228</li>
-              <li><i class="fas fa-envelope"></i> contato@officedente.com.br</li>
+              <li><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4f2c20213b2e3b200f202929262c2a2b2a213b2a612c2022612d3d">[email&#160;protected]</a></li>
               <li><i class="fas fa-map-marker-alt"></i> Porto Velho - RO</li>
             </ul>
           </div>
@@ -587,6 +572,30 @@
   <a href="https://wa.me/556993282228" class="whatsapp-bubble">
     <i class="fab fa-whatsapp"></i>
   </a>
+
+  <!-- Mapa Fixo - Canto Inferior Direito -->
+  <div class="map-fixed" id="mapFixed">
+    <div class="map-header">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>Nossa Localização</span>
+      <button class="map-close" id="mapClose">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.2690541689794!2d-63.90639453386841!3d-8.760736921980921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92325cd9871aaaab%3A0x8c1462d80075a1f1!2sOfficedente!5e0!3m2!1spt-BR!2sbr!4v1769647875311!5m2!1spt-BR!2sbr"
+      width="100%" 
+      height="100%" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <!-- Botão para abrir o mapa (quando fechado) -->
+  <button class="map-toggle" id="mapToggle">
+    <i class="fas fa-map-marked-alt"></i>
+  </button>
 
   <script src="script.js"></script>
 </body>

@@ -392,6 +392,25 @@ window.addEventListener('load', () => {
   }, 100);
 });
 
+// ========== MAP TOGGLE ==========
+const mapFixed = document.getElementById('mapFixed');
+const mapToggle = document.getElementById('mapToggle');
+const mapClose = document.getElementById('mapClose');
+
+if (mapClose && mapFixed && mapToggle) {
+  // Fechar mapa
+  mapClose.addEventListener('click', () => {
+    mapFixed.classList.add('hidden');
+    mapToggle.classList.add('show');
+  });
+  
+  // Abrir mapa
+  mapToggle.addEventListener('click', () => {
+    mapFixed.classList.remove('hidden');
+    mapToggle.classList.remove('show');
+  });
+}
+
 // ========== INITIALIZE ALL ==========
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize counter animation
