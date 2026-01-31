@@ -1,602 +1,358 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OFFICEDENTE - Sorrisos que Transformam Vidas</title>
-  <meta name="description" content="Clínica odontológica premium com tecnologia de ponta. Cuidamos do seu sorriso com excelência.">
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OFFICEDENTE - Transforme seu Sorriso</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  
-  <!-- Cursor Personalizado -->
-  <div class="custom-cursor"></div>
-  <div class="custom-cursor-follower"></div>
-
-  <!-- Navigation Vertical -->
-  <nav class="sidebar">
-    <div class="sidebar-logo">
-      <div class="logo-circle">
-        <i class="fas fa-tooth"></i>
-      </div>
-    </div>
-    
-    <ul class="sidebar-menu">
-      <li><a href="#hero" class="menu-item active" data-text="Início"><i class="fas fa-home"></i></a></li>
-      <li><a href="#about" class="menu-item" data-text="Sobre"><i class="fas fa-info-circle"></i></a></li>
-      <li><a href="#services" class="menu-item" data-text="Serviços"><i class="fas fa-briefcase-medical"></i></a></li>
-      <li><a href="#team" class="menu-item" data-text="Equipe"><i class="fas fa-user-md"></i></a></li>
-      <li><a href="#gallery" class="menu-item" data-text="Galeria"><i class="fas fa-images"></i></a></li>
-      <li><a href="#contact" class="menu-item" data-text="Contato"><i class="fas fa-envelope"></i></a></li>
-    </ul>
-    
-    <div class="sidebar-social">
-      <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-      <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-      <a href="https://wa.me/556993282228" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-    </div>
-  </nav>
-
-  <!-- Mobile Header -->
-  <header class="mobile-header">
-    <div class="mobile-logo">
-      <i class="fas fa-tooth"></i>
-      <span>OFFICEDENTE</span>
-    </div>
-    <button class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </header>
-
-  <!-- Main Content -->
-  <main class="main-content">
-    
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-      <div class="hero-grid">
-        <div class="hero-left">
-          <div class="hero-tag">
-            <span class="tag-dot"></span>
-            Emergências 24h disponíveis
-          </div>
-          
-          <h1 class="hero-heading">
-            Seu sorriso
-            <span class="heading-highlight">perfeito</span>
-            começa aqui
-          </h1>
-          
-          <p class="hero-text">
-            Transformamos vidas através de sorrisos. Tecnologia de ponta, 
-            profissionais experientes e um cuidado que vai além do consultório.
-          </p>
-          
-          <div class="hero-cta">
-            <a href="https://wa.me/556993282228" class="btn-primary">
-              <span>Agendar Consulta</span>
-              <div class="btn-icon">
-                <i class="fab fa-whatsapp"></i>
-              </div>
-            </a>
-            <a href="#services" class="btn-outline">
-              <span>Nossos Serviços</span>
-              <i class="fas fa-arrow-down"></i>
-            </a>
-          </div>
-          
-          <div class="hero-metrics">
-            <div class="metric">
-              <div class="metric-value">980+</div>
-              <div class="metric-label">Sorrisos transformados</div>
-            </div>
-            <div class="metric">
-              <div class="metric-value">10+</div>
-              <div class="metric-label">Anos de expertise</div>
-            </div>
-            <div class="metric">
-              <div class="metric-value">4.9★</div>
-              <div class="metric-label">Avaliação média</div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="hero-right">
-          <div class="hero-image-wrapper">
-            <div class="floating-element elem-1">
-              <div class="elem-icon">
-                <i class="fas fa-shield-check"></i>
-              </div>
-              <span>100% Seguro</span>
-            </div>
-            <div class="floating-element elem-2">
-              <div class="elem-icon">
-                <i class="fas fa-award"></i>
-              </div>
-              <span>Certificados</span>
-            </div>
-            <div class="floating-element elem-3">
-              <div class="elem-icon">
-                <i class="fas fa-clock"></i>
-              </div>
-              <span>24/7 Suporte</span>
-            </div>
-            <div class="hero-visual-main">
-              <div class="visual-circle"></div>
-              <div class="visual-icon">
+    <!-- NAVBAR FLUTUANTE -->
+    <nav class="navbar-float">
+        <div class="nav-container">
+            <div class="logo">
                 <i class="fas fa-tooth"></i>
-              </div>
+                <span>OFFICEDENTE</span>
             </div>
-          </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#team">Equipe</a></li>
+                <li><a href="#testimonials">Depoimentos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <button class="cta-btn">Agendar</button>
         </div>
-      </div>
+    </nav>
+
+    <!-- HERO SECTION - DESIGN OUSADO -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="word">Seu</span>
+                    <span class="word highlight">Sorriso</span>
+                    <span class="word">Merece</span>
+                    <span class="word highlight">Brilhar</span>
+                </h1>
+                <p class="hero-subtitle">Transformamos sorrisos em histórias de confiança e beleza</p>
+                <div class="hero-ctas">
+                    <button class="btn btn-primary">Agendar Consulta</button>
+                    <button class="btn btn-secondary">Conhecer Serviços</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <div class="card-content">
+                        <span class="number">670+</span>
+                        <p>Sorrisos Transformados</p>
+                    </div>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="card-content">
+                        <span class="number">7+</span>
+                        <p>Anos de Expertise</p>
+                    </div>
+                </div>
+                <div class="floating-card card-3">
+                    <div class="card-content">
+                        <span class="number">4.9★</span>
+                        <p>Avaliação Média</p>
+                    </div>
+                </div>
+                <div class="hero-shape shape-1"></div>
+                <div class="hero-shape shape-2"></div>
+                <div class="hero-shape shape-3"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll para descobrir</span>
+            <div class="mouse"></div>
+        </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-      <div class="section-container">
-        <div class="about-grid">
-          <div class="about-content">
-            <div class="section-label">
-              <div class="label-line"></div>
-              <span>Sobre nós</span>
+    <!-- SEÇÃO SOBRE - DESIGN CRIATIVO COM GRID -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-header">
+                <h2>Por que somos <span class="highlight">diferentes</span></h2>
+                <p>Mais que um consultório, somos um movimento de transformação</p>
             </div>
             
-            <h2 class="section-heading">
-              Excelência em 
-              <span class="text-gold">odontologia</span>
-            </h2>
-            
-            <p class="section-description">
-              Na OFFICEDENTE, unimos expertise médica de alto nível com 
-              tecnologia de última geração para criar experiências únicas 
-              em cuidados odontológicos.
-            </p>
-            
-            <div class="features-grid">
-              <div class="feature-box">
-                <div class="feature-icon-wrapper">
-                  <i class="fas fa-microscope"></i>
+            <div class="about-grid">
+                <div class="about-card about-card-1">
+                    <div class="card-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Tecnologia de Ponta</h3>
+                    <p>Equipamentos digitais de última geração para diagnósticos precisos e tratamentos eficientes</p>
                 </div>
-                <h3>Tecnologia Avançada</h3>
-                <p>Equipamentos digitais de última geração para diagnósticos precisos</p>
-              </div>
-              
-              <div class="feature-box">
-                <div class="feature-icon-wrapper">
-                  <i class="fas fa-user-md"></i>
+
+                <div class="about-card about-card-2">
+                    <div class="card-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Profissionais Certificados</h3>
+                    <p>Especialistas com certificações internacionais e dedicação ao aperfeiçoamento contínuo</p>
                 </div>
-                <h3>Equipe Especializada</h3>
-                <p>Profissionais certificados com anos de experiência internacional</p>
-              </div>
-              
-              <div class="feature-box">
-                <div class="feature-icon-wrapper">
-                  <i class="fas fa-heart"></i>
+
+                <div class="about-card about-card-3">
+                    <div class="card-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Humanidade em Primeiro</h3>
+                    <p>Cada paciente é único. Personalizamos cada tratamento com empatia e cuidado</p>
                 </div>
-                <h3>Atendimento Humanizado</h3>
-                <p>Cuidado personalizado e ambiente acolhedor para cada paciente</p>
-              </div>
-              
-              <div class="feature-box">
-                <div class="feature-icon-wrapper">
-                  <i class="fas fa-certificate"></i>
+
+                <div class="about-card about-card-4">
+                    <div class="card-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Segurança Garantida</h3>
+                    <p>Protocolos rigorosos de biossegurança e higiene em todos os procedimentos</p>
                 </div>
-                <h3>Qualidade Garantida</h3>
-                <p>Protocolos rigorosos e materiais premium em todos os tratamentos</p>
-              </div>
             </div>
-          </div>
-          
-          <div class="about-visual">
-            <div class="visual-grid">
-              <div class="visual-item item-large">
-                <div class="visual-placeholder">
-                  <i class="fas fa-clinic-medical"></i>
-                  <span>Clínica Moderna</span>
-                </div>
-              </div>
-              <div class="visual-item">
-                <div class="visual-placeholder">
-                  <i class="fas fa-x-ray"></i>
-                  <span>Raio-X Digital</span>
-                </div>
-              </div>
-              <div class="visual-item">
-                <div class="visual-placeholder">
-                  <i class="fas fa-laptop-medical"></i>
-                  <span>Tech Premium</span>
-                </div>
-              </div>
-            </div>
-            <div class="visual-badge">
-              <div class="badge-number">10+</div>
-              <div class="badge-text">Anos de<br>Experiência</div>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-      <div class="section-container">
-        <div class="section-header-center">
-          <div class="section-label">
-            <div class="label-line"></div>
-            <span>Especialidades</span>
-          </div>
-          <h2 class="section-heading">
-            Serviços <span class="text-gold">completos</span> para você
-          </h2>
-          <p class="section-description">
-            Soluções odontológicas integradas com foco em resultados excepcionais
-          </p>
+    <!-- SEÇÃO SERVIÇOS - LAYOUT CRIATIVO -->
+    <section id="services" class="services">
+        <div class="services-header">
+            <h2>Especialidades que <span class="highlight">transformam</span></h2>
+            <p>Soluções completas para seu sorriso perfeito</p>
         </div>
-        
-        <div class="services-masonry">
-          <div class="service-item">
-            <div class="service-number">01</div>
-            <div class="service-icon-lg">
-              <i class="fas fa-teeth"></i>
+
+        <div class="services-grid">
+            <div class="service-card service-card-1">
+                <div class="service-icon">
+                    <i class="fas fa-tooth"></i>
+                </div>
+                <h3>Implantodontia</h3>
+                <p>Implantes dentários com tecnologia guiada por computador para resultados naturais</p>
+                <a href="#" class="service-link">Saiba Mais <i class="fas fa-arrow-right"></i></a>
             </div>
-            <h3>Implantodontia</h3>
-            <p>Implantes dentários com tecnologia guiada por computador para resultados perfeitos</p>
-            <a href="https://wa.me/556993282228" class="service-link">
-              Saiba mais <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-          
-          <div class="service-item featured">
-            <div class="featured-badge">Mais procurado</div>
-            <div class="service-number">02</div>
-            <div class="service-icon-lg">
-              <i class="fas fa-smile-beam"></i>
+
+            <div class="service-card service-card-2">
+                <div class="service-icon">
+                    <i class="fas fa-smile"></i>
+                </div>
+                <h3>Design de Sorriso</h3>
+                <p>Transformação estética completa com planejamento digital 3D personalizado</p>
+                <a href="#" class="service-link">Saiba Mais <i class="fas fa-arrow-right"></i></a>
             </div>
-            <h3>Design de Sorriso</h3>
-            <p>Transformação completa usando tecnologia de planejamento digital 3D</p>
-            <a href="https://wa.me/556993282228" class="service-link">
-              Saiba mais <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-          
-          <div class="service-item">
-            <div class="service-number">03</div>
-            <div class="service-icon-lg">
-              <i class="fas fa-tooth"></i>
+
+            <div class="service-card service-card-3">
+                <div class="service-icon">
+                    <i class="fas fa-align-center"></i>
+                </div>
+                <h3>Ortodontia Invisível</h3>
+                <p>Alinhadores transparentes para um sorriso perfeito sem comprometer a estética</p>
+                <a href="#" class="service-link">Saiba Mais <i class="fas fa-arrow-right"></i></a>
             </div>
-            <h3>Ortodontia Invisível</h3>
-            <p>Alinhadores transparentes personalizados para corrigir seu sorriso discretamente</p>
-            <a href="https://wa.me/556993282228" class="service-link">
-              Saiba mais <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-          
-          <div class="service-item">
-            <div class="service-number">04</div>
-            <div class="service-icon-lg">
-              <i class="fas fa-paint-brush"></i>
+
+            <div class="service-card service-card-4">
+                <div class="service-icon">
+                    <i class="fas fa-sparkles"></i>
+                </div>
+                <h3>Clareamento Avançado</h3>
+                <p>Técnicas de clareamento de última geração para um sorriso mais radiante</p>
+                <a href="#" class="service-link">Saiba Mais <i class="fas fa-arrow-right"></i></a>
             </div>
-            <h3>Clareamento</h3>
-            <p>Tratamentos de clareamento profissional com resultados visíveis e duradouros</p>
-            <a href="https://wa.me/556993282228" class="service-link">
-              Saiba mais <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-          
-          <div class="service-item">
-            <div class="service-number">05</div>
-            <div class="service-icon-lg">
-              <i class="fas fa-child"></i>
+
+            <div class="service-card service-card-5">
+                <div class="service-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Reabilitação Oral</h3>
+                <p>Restauração completa da função e estética bucal com soluções integradas</p>
+                <a href="#" class="service-link">Saiba Mais <i class="fas fa-arrow-right"></i></a>
             </div>
-            <h3>Odontopediatria</h3>
-            <p>Cuidado especializado e carinhoso para a saúde bucal dos pequenos</p>
-            <a href="https://wa.me/556993282228" class="service-link">
-              Saiba mais <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-          
-          <div class="service-item">
-            <div class="service-number">06</div>
-            <div class="service-icon-lg">
-              <i class="fas fa-syringe"></i>
+
+            <div class="service-card service-card-6">
+                <div class="service-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3>Periodontia</h3>
+                <p>Saúde gengival especializada com tratamentos preventivos e regenerativos</p>
+                <a href="#" class="service-link">Saiba Mais <i class="fas fa-arrow-right"></i></a>
             </div>
-            <h3>Endodontia</h3>
-            <p>Tratamento de canal com técnicas modernas e minimamente invasivas</p>
-            <a href="https://wa.me/556993282228" class="service-link">
-              Saiba mais <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
         </div>
-      </div>
     </section>
 
-    <!-- Team Section -->
-    <section class="team" id="team">
-      <div class="section-container">
-        <div class="section-header-center">
-          <div class="section-label">
-            <div class="label-line"></div>
-            <span>Nossa equipe</span>
-          </div>
-          <h2 class="section-heading">
-            Profissionais <span class="text-gold">dedicados</span>
-          </h2>
+    <!-- SEÇÃO EQUIPE - DESIGN MODERNO -->
+    <section id="team" class="team">
+        <div class="team-header">
+            <h2>Nossa <span class="highlight">Equipe</span> de Especialistas</h2>
+            <p>Profissionais dedicados a transformar sorrisos</p>
         </div>
-        
+
         <div class="team-grid">
-          <div class="team-card">
-            <div class="team-image">
-              <img src="img/Icris maca.jpeg" alt="Dra. Icris Jardim">
-              <div class="team-overlay">
-                <a href="https://wa.me/556993282228" class="contact-dr">
-                  <i class="fab fa-whatsapp"></i>
-                </a>
-              </div>
-            </div>
-            <div class="team-info">
-              <h3>Dra. Icris Jardim</h3>
-              <span class="team-specialty">Implantodontia & Cirurgia</span>
-              <span class="team-cro">CRO-SP 45.892</span>
-              <p>Mais de 15 anos de experiência em implantes complexos e cirurgias avançadas</p>
-            </div>
-          </div>
-          
-          <div class="team-card">
-            <div class="team-image">
-              <img src="img/Maísa de branco.jpg" alt="Dra. Maísa Carrilho">
-              <div class="team-overlay">
-                <a href="https://wa.me/556993282228" class="contact-dr">
-                  <i class="fab fa-whatsapp"></i>
-                </a>
-              </div>
-            </div>
-            <div class="team-info">
-              <h3>Dra. Maísa Carrilho</h3>
-              <span class="team-specialty">Ortodontia & Estética</span>
-              <span class="team-cro">CRO-SP 52.341</span>
-              <p>Especialista em design de sorriso e ortodontia invisível certificada internacionalmente</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="gallery" id="gallery">
-      <div class="section-container">
-        <div class="section-header-center">
-          <div class="section-label">
-            <div class="label-line"></div>
-            <span>Galeria</span>
-          </div>
-          <h2 class="section-heading">
-            Nossos <span class="text-gold">resultados</span>
-          </h2>
-        </div>
-        
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <div class="gallery-placeholder">
-              <i class="fas fa-image"></i>
-              <span>Antes & Depois</span>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-placeholder">
-              <i class="fas fa-image"></i>
-              <span>Implantes</span>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-placeholder">
-              <i class="fas fa-image"></i>
-              <span>Clareamento</span>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-placeholder">
-              <i class="fas fa-image"></i>
-              <span>Ortodontia</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-      <div class="section-container">
-        <div class="testimonials-wrapper">
-          <div class="testimonial-active" id="testimonialContent">
-            <div class="quote-icon">
-              <i class="fas fa-quote-left"></i>
-            </div>
-            <p class="testimonial-text">
-              "Experiência incrível do início ao fim. A equipe é extremamente 
-              profissional e o resultado superou todas as minhas expectativas. 
-              Meu sorriso nunca esteve tão bonito!"
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <i class="fas fa-user"></i>
-              </div>
-              <div class="author-info">
-                <h4>Carolina Alexandra</h4>
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+            <div class="team-card">
+                <div class="team-avatar">
+                    <div class="avatar-placeholder">
+                        <i class="fas fa-user-md"></i>
+                    </div>
                 </div>
-              </div>
-              <i class="fab fa-google google-icon"></i>
+                <h3>Dr. Carlos Silva</h3>
+                <p class="specialty">Cirurgião-Dentista Especialista</p>
+                <p class="bio">20 anos de experiência em implantodontia e reabilitação oral</p>
+                <div class="team-social">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
-          </div>
-          
-          <div class="testimonials-nav">
-            <button class="nav-btn" id="prevTest"><i class="fas fa-chevron-left"></i></button>
-            <div class="nav-dots" id="testDots"></div>
-            <button class="nav-btn" id="nextTest"><i class="fas fa-chevron-right"></i></button>
-          </div>
+
+            <div class="team-card">
+                <div class="team-avatar">
+                    <div class="avatar-placeholder">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                </div>
+                <h3>Dra. Marina Costa</h3>
+                <p class="specialty">Especialista em Estética Dental</p>
+                <p class="bio">15 anos dedicados ao design de sorriso e odontologia estética</p>
+                <div class="team-social">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-avatar">
+                    <div class="avatar-placeholder">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                </div>
+                <h3>Dr. Felipe Santos</h3>
+                <p class="specialty">Ortodontista Certificado</p>
+                <p class="bio">12 anos de experiência em ortodontia moderna e invisível</p>
+                <div class="team-social">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-      <div class="section-container">
-        <div class="contact-content">
-          <div class="section-label">
-            <div class="label-line"></div>
-            <span>Entre em contato</span>
-          </div>
-          
-          <h2 class="section-heading">
-            Vamos cuidar do seu
-            <span class="text-gold">sorriso</span>
-          </h2>
-          
-          <p class="section-description">
-            Agende sua consulta e descubra como podemos transformar seu sorriso
-          </p>
-          
-          <div class="contact-info-list">
-            <div class="contact-info-item">
-              <div class="info-icon">
-                <i class="fas fa-phone"></i>
-              </div>
-              <div class="info-content">
-                <span class="info-label">Telefone</span>
-                <a href="tel:+556993282228" class="info-value">+55 69 9328-2228</a>
-              </div>
-            </div>
-            
-            <div class="contact-info-item">
-              <div class="info-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div class="info-content">
-                <span class="info-label">Endereço</span>
-                <span class="info-value">R. Duque de Caxias, 755<br>Porto Velho - RO</span>
-              </div>
-            </div>
-            
-            <div class="contact-info-item">
-              <div class="info-icon">
-                <i class="fas fa-clock"></i>
-              </div>
-              <div class="info-content">
-                <span class="info-label">Horário</span>
-                <span class="info-value">Sáb: 9h-20h | Dom: Agendamento</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="emergency-box">
-            <div class="emergency-icon">
-              <i class="fas fa-ambulance"></i>
-            </div>
-            <div class="emergency-content">
-              <h4>Emergência 24h</h4>
-              <p>Atendimento disponível a qualquer momento</p>
-              <a href="https://wa.me/556993282228" class="emergency-btn">
-                <i class="fab fa-whatsapp"></i>
-                Chamar agora
-              </a>
-            </div>
-          </div>
+    <!-- SEÇÃO DEPOIMENTOS - CARROSSEL CRIATIVO -->
+    <section id="testimonials" class="testimonials">
+        <div class="testimonials-header">
+            <h2>O que nossos <span class="highlight">pacientes</span> dizem</h2>
+            <p>Histórias reais de transformação</p>
         </div>
-      </div>
+
+        <div class="testimonials-container">
+            <div class="testimonials-carousel">
+                <div class="testimonial-card active">
+                    <div class="testimonial-header">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Experiência incrível! A equipe é extremamente profissional e o resultado superou todas as minhas expectativas. Meu sorriso nunca esteve tão bonito e confiante!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">CA</div>
+                        <div class="author-info">
+                            <h4>Carolina Alexandra</h4>
+                            <p>Paciente há 2 anos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Muito bom! Me deu uma excelente explicação dos procedimentos e me senti bastante confortável. Um excelente profissional com atendimento impecável."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MP</div>
+                        <div class="author-info">
+                            <h4>Marcela Pinto</h4>
+                            <p>Paciente há 1 ano</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"A clínica é fantástica! Agradeço a qualidade do serviço, flexibilidade e profissionalismo. Recomendo muito para todos os meus amigos!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">VV</div>
+                        <div class="author-info">
+                            <h4>Victor Valladares</h4>
+                            <p>Paciente há 3 anos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <button class="carousel-btn prev" id="prevTest">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel-dots" id="testDots"></div>
+                <button class="carousel-btn next" id="nextTest">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
     </section>
 
-    <!-- Footer -->
+    <!-- SEÇÃO CTA - IMPACTANTE -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Pronto para transformar seu sorriso?</h2>
+            <p>Agende sua consulta hoje e comece sua jornada para um sorriso perfeito</p>
+            <button class="btn btn-large">Agendar Agora</button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer class="footer">
-      <div class="section-container">
-        <div class="footer-top">
-          <div class="footer-brand">
-            <div class="footer-logo">
-              <i class="fas fa-tooth"></i>
-              <span>OFFICEDENTE</span>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>OFFICEDENTE</h4>
+                <p>Transformando sorrisos, mudando vidas</p>
             </div>
-            <p>Transformando sorrisos, mudando vidas. Sua clínica de confiança em Porto Velho.</p>
-            <div class="footer-socials">
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-facebook"></i></a>
-              <a href="https://wa.me/556993282228"><i class="fab fa-whatsapp"></i></a>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>📞 (69) 99328-2228</p>
+                <p>📧 contato@officedente.com</p>
             </div>
-          </div>
-          
-          <div class="footer-links">
-            <h4>Links Rápidos</h4>
-            <ul>
-              <li><a href="#hero">Início</a></li>
-              <li><a href="#about">Sobre</a></li>
-              <li><a href="#services">Serviços</a></li>
-              <li><a href="#team">Equipe</a></li>
-            </ul>
-          </div>
-          
-          <div class="footer-links">
-            <h4>Serviços</h4>
-            <ul>
-              <li><a href="#services">Implantodontia</a></li>
-              <li><a href="#services">Design de Sorriso</a></li>
-              <li><a href="#services">Ortodontia</a></li>
-              <li><a href="#services">Clareamento</a></li>
-            </ul>
-          </div>
-          
-          <div class="footer-contact">
-            <h4>Contato</h4>
-            <ul>
-              <li><i class="fas fa-phone"></i> +55 69 9328-2228</li>
-              <li><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4f2c20213b2e3b200f202929262c2a2b2a213b2a612c2022612d3d">[email&#160;protected]</a></li>
-              <li><i class="fas fa-map-marker-alt"></i> Porto Velho - RO</li>
-            </ul>
-          </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
         </div>
-        
         <div class="footer-bottom">
-          <p>&copy; 2024 OFFICEDENTE. Todos os direitos reservados.</p>
+            <p>&copy; 2024 OFFICEDENTE. Todos os direitos reservados.</p>
         </div>
-      </div>
     </footer>
-  </main>
 
-  <!-- WhatsApp Float -->
-  <a href="https://wa.me/556993282228" class="whatsapp-bubble">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <!-- Mapa Fixo - Canto Inferior Direito -->
-  <div class="map-fixed" id="mapFixed">
-    <div class="map-header">
-      <i class="fas fa-map-marker-alt"></i>
-      <span>Nossa Localização</span>
-      <button class="map-close" id="mapClose">
-        <i class="fas fa-times"></i>
-      </button>
-    </div>
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.2690541689794!2d-63.90639453386841!3d-8.760736921980921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92325cd9871aaaab%3A0x8c1462d80075a1f1!2sOfficedente!5e0!3m2!1spt-BR!2sbr!4v1769647875311!5m2!1spt-BR!2sbr"
-      width="100%" 
-      height="100%" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy">
-    </iframe>
-  </div>
-
-  <!-- Botão para abrir o mapa (quando fechado) -->
-  <button class="map-toggle" id="mapToggle">
-    <i class="fas fa-map-marked-alt"></i>
-  </button>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
