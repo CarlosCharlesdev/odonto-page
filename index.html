@@ -3,11 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OFFICEDENTE - Sorrisos que Transformam Vidas</title>
-  <meta name="description" content="Clínica odontológica premium com tecnologia de ponta. Cuidamos do seu sorriso com excelência.">
+  <title>OFFICEDENTE - Transformando Sorrisos com Ciência e Cuidado</title>
+  <meta name="description" content="Clínica odontológica com tecnologia moderna, planejamento personalizado e atendimento humanizado. Cuidamos do seu sorriso com excelência em Porto Velho - RO.">
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ── Dra. Icris – card destaque centralizado ── */
+    .team-featured-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .team-card--featured {
+      position: relative;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      border: 2px solid var(--gold, #c9a96e);
+      box-shadow: 0 8px 40px rgba(201,169,110,0.18);
+    }
+
+    .team-card--featured .team-image {
+      height: 340px;
+    }
+
+    .team-featured-badge {
+      position: absolute;
+      top: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold, #c9a96e);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 1rem;
+      border-radius: 999px;
+      z-index: 10;
+      white-space: nowrap;
+    }
+
+    .team-card--featured .team-info p {
+      font-size: 0.88rem;
+      line-height: 1.65;
+    }
+
+    /* ── Grade 3 colunas para os demais ── */
+    .team-grid--3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 900px) {
+      .team-grid--3col {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 580px) {
+      .team-grid--3col {
+        grid-template-columns: 1fr;
+      }
+      .team-card--featured {
+        max-width: 100%;
+      }
+    }
+  </style>
+
+  <style id="floating-fix">
+    /* ── Floating elements: ícone + texto na mesma linha ── */
+    .floating-element {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      gap: 0.5rem !important;
+      white-space: nowrap;
+    }
+    .floating-element .elem-icon {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .floating-element span {
+      font-size: 0.8rem;
+      font-weight: 600;
+      line-height: 1;
+    }
+  </style>
 </head>
 <body>
   
@@ -35,7 +123,7 @@
     <div class="sidebar-social">
       <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
       <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-      <a href="https://wa.me/999999999999" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://wa.me/556993282228" class="social-icon"><i class="fab fa-whatsapp"></i></a>
     </div>
   </nav>
 
@@ -61,29 +149,30 @@
         <div class="hero-left">
           <div class="hero-tag">
             <span class="tag-dot"></span>
-            Emergências 24h disponíveis
+            Atendimento com hora marcada
           </div>
           
           <h1 class="hero-heading">
-            Seu sorriso
-            <span class="heading-highlight">perfeito</span>
-            começa aqui
+            Transformando sorrisos com
+            <span class="heading-highlight">tecnologia, ciência</span>
+            e cuidado individualizado
           </h1>
           
           <p class="hero-text">
-            Transformamos vidas através de sorrisos. Tecnologia de ponta, 
-            profissionais experientes e um cuidado que vai além do consultório.
+            Na Officedente, cada tratamento é planejado de forma personalizada, 
+            utilizando tecnologia moderna e protocolos científicos para oferecer 
+            resultados estéticos, funcionais e duradouros.
           </p>
           
           <div class="hero-cta">
-            <a href="https://wa.me/999999999999" class="btn-primary">
-              <span>Agendar Consulta</span>
+            <a href="https://wa.me/556993282228" class="btn-primary">
+              <span>Agendar Avaliação</span>
               <div class="btn-icon">
                 <i class="fab fa-whatsapp"></i>
               </div>
             </a>
             <a href="#services" class="btn-outline">
-              <span>Nossos Serviços</span>
+              <span>Nossas Especialidades</span>
               <i class="fas fa-arrow-down"></i>
             </a>
           </div>
@@ -94,8 +183,8 @@
               <div class="metric-label">Sorrisos transformados</div>
             </div>
             <div class="metric">
-              <div class="metric-value">10+</div>
-              <div class="metric-label">Anos de expertise</div>
+              <div class="metric-value">7</div>
+              <div class="metric-label">Especialidades</div>
             </div>
             <div class="metric">
               <div class="metric-value">4.9★</div>
@@ -120,9 +209,9 @@
             </div>
             <div class="floating-element elem-3">
               <div class="elem-icon">
-                <i class="fas fa-clock"></i>
+                <i class="fas fa-microscope"></i>
               </div>
-              <span>24/7 Suporte</span>
+              <span>Baseado em Ciência</span>
             </div>
             <div class="hero-visual-main">
               <div class="visual-circle"></div>
@@ -151,9 +240,10 @@
             </h2>
             
             <p class="section-description">
-              Na OFFICEDENTE, unimos expertise médica de alto nível com 
-              tecnologia de última geração para criar experiências únicas 
-              em cuidados odontológicos.
+              A Officedente é uma clínica odontológica que une tecnologia, planejamento 
+              personalizado e atendimento humanizado para proporcionar tratamentos de alta 
+              qualidade e resultados previsíveis. Nosso objetivo é cuidar da saúde, da função 
+              e da estética do sorriso, sempre respeitando as necessidades individuais de cada paciente.
             </p>
             
             <div class="features-grid">
@@ -161,8 +251,8 @@
                 <div class="feature-icon-wrapper">
                   <i class="fas fa-microscope"></i>
                 </div>
-                <h3>Tecnologia Avançada</h3>
-                <p>Equipamentos digitais de última geração para diagnósticos precisos</p>
+                <h3>Tecnologia a Favor do Seu Sorriso</h3>
+                <p>Diagnóstico preciso, planejamento digital e tratamentos modernos para mais conforto, segurança e previsibilidade</p>
               </div>
               
               <div class="feature-box">
@@ -170,7 +260,7 @@
                   <i class="fas fa-user-md"></i>
                 </div>
                 <h3>Equipe Especializada</h3>
-                <p>Profissionais certificados com anos de experiência internacional</p>
+                <p>Profissionais qualificados em constante atualização científica nacional e internacional</p>
               </div>
               
               <div class="feature-box">
@@ -178,15 +268,15 @@
                   <i class="fas fa-heart"></i>
                 </div>
                 <h3>Atendimento Humanizado</h3>
-                <p>Cuidado personalizado e ambiente acolhedor para cada paciente</p>
+                <p>Cuidado personalizado respeitando as necessidades individuais de cada paciente</p>
               </div>
               
               <div class="feature-box">
                 <div class="feature-icon-wrapper">
                   <i class="fas fa-certificate"></i>
                 </div>
-                <h3>Qualidade Garantida</h3>
-                <p>Protocolos rigorosos e materiais premium em todos os tratamentos</p>
+                <h3>Planejamento Individualizado</h3>
+                <p>Foco em estética, função e estabilidade do resultado em cada caso clínico</p>
               </div>
             </div>
           </div>
@@ -202,18 +292,18 @@
               <div class="visual-item">
                 <div class="visual-placeholder">
                   <i class="fas fa-x-ray"></i>
-                  <span>Raio-X Digital</span>
+                  <span>Diagnóstico Digital</span>
                 </div>
               </div>
               <div class="visual-item">
                 <div class="visual-placeholder">
                   <i class="fas fa-laptop-medical"></i>
-                  <span>Tech Premium</span>
+                  <span>Planejamento 3D</span>
                 </div>
               </div>
             </div>
             <div class="visual-badge">
-              <div class="badge-number">10+</div>
+              <div class="badge-number">+</div>
               <div class="badge-text">Anos de<br>Experiência</div>
             </div>
           </div>
@@ -230,10 +320,11 @@
             <span>Especialidades</span>
           </div>
           <h2 class="section-heading">
-            Serviços <span class="text-gold">completos</span> para você
+            Odontologia completa <span class="text-gold">em um só lugar</span>
           </h2>
           <p class="section-description">
-            Soluções odontológicas integradas com foco em resultados excepcionais
+            Na Officedente você encontra diferentes especialidades odontológicas, permitindo 
+            um atendimento integrado e planejamento completo para cada paciente.
           </p>
         </div>
         
@@ -243,9 +334,9 @@
             <div class="service-icon-lg">
               <i class="fas fa-teeth"></i>
             </div>
-            <h3>Implantodontia</h3>
-            <p>Implantes dentários com tecnologia guiada por computador para resultados perfeitos</p>
-            <a href="https://wa.me/999999999999" class="service-link">
+            <h3>Ortodontia</h3>
+            <p>Tratamento para correção do posicionamento dos dentes e da mordida, melhorando estética, função mastigatória e saúde bucal.</p>
+            <a href="https://wa.me/556993282228" class="service-link">
               Saiba mais <i class="fas fa-arrow-right"></i>
             </a>
           </div>
@@ -256,9 +347,9 @@
             <div class="service-icon-lg">
               <i class="fas fa-smile-beam"></i>
             </div>
-            <h3>Design de Sorriso</h3>
-            <p>Transformação completa usando tecnologia de planejamento digital 3D</p>
-            <a href="https://wa.me/999999999999" class="service-link">
+            <h3>Alinhadores Invisíveis</h3>
+            <p>Tratamento ortodôntico moderno e discreto que utiliza alinhadores transparentes e removíveis para alinhar os dentes com conforto e previsibilidade.</p>
+            <a href="https://wa.me/556993282228" class="service-link">
               Saiba mais <i class="fas fa-arrow-right"></i>
             </a>
           </div>
@@ -266,11 +357,11 @@
           <div class="service-item">
             <div class="service-number">03</div>
             <div class="service-icon-lg">
-              <i class="fas fa-tooth"></i>
+              <i class="fas fa-child"></i>
             </div>
-            <h3>Ortodontia Invisível</h3>
-            <p>Alinhadores transparentes personalizados para corrigir seu sorriso discretamente</p>
-            <a href="https://wa.me/999999999999" class="service-link">
+            <h3>Ortodontia Preventiva e Interceptativa</h3>
+            <p>Tratamentos realizados em crianças para orientar o crescimento e desenvolvimento adequado dos ossos e dentes.</p>
+            <a href="https://wa.me/556993282228" class="service-link">
               Saiba mais <i class="fas fa-arrow-right"></i>
             </a>
           </div>
@@ -278,11 +369,11 @@
           <div class="service-item">
             <div class="service-number">04</div>
             <div class="service-icon-lg">
-              <i class="fas fa-paint-brush"></i>
+              <i class="fas fa-tooth"></i>
             </div>
-            <h3>Clareamento</h3>
-            <p>Tratamentos de clareamento profissional com resultados visíveis e duradouros</p>
-            <a href="https://wa.me/999999999999" class="service-link">
+            <h3>Implantodontia</h3>
+            <p>Especialidade responsável pela reabilitação de dentes perdidos por meio de implantes dentários, devolvendo função mastigatória e estética ao sorriso.</p>
+            <a href="https://wa.me/556993282228" class="service-link">
               Saiba mais <i class="fas fa-arrow-right"></i>
             </a>
           </div>
@@ -290,11 +381,11 @@
           <div class="service-item">
             <div class="service-number">05</div>
             <div class="service-icon-lg">
-              <i class="fas fa-child"></i>
+              <i class="fas fa-syringe"></i>
             </div>
-            <h3>Odontopediatria</h3>
-            <p>Cuidado especializado e carinhoso para a saúde bucal dos pequenos</p>
-            <a href="https://wa.me/999999999999" class="service-link">
+            <h3>Endodontia</h3>
+            <p>Tratamento de canal realizado para tratar infecções ou inflamações na polpa dentária, preservando o dente natural.</p>
+            <a href="https://wa.me/556993282228" class="service-link">
               Saiba mais <i class="fas fa-arrow-right"></i>
             </a>
           </div>
@@ -302,11 +393,47 @@
           <div class="service-item">
             <div class="service-number">06</div>
             <div class="service-icon-lg">
-              <i class="fas fa-syringe"></i>
+              <i class="fas fa-heartbeat"></i>
             </div>
-            <h3>Endodontia</h3>
-            <p>Tratamento de canal com técnicas modernas e minimamente invasivas</p>
-            <a href="https://wa.me/999999999999" class="service-link">
+            <h3>Periodontia</h3>
+            <p>Tratamento e prevenção das doenças da gengiva e dos tecidos que sustentam os dentes, como gengivite e periodontite.</p>
+            <a href="https://wa.me/556993282228" class="service-link">
+              Saiba mais <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="service-item">
+            <div class="service-number">07</div>
+            <div class="service-icon-lg">
+              <i class="fas fa-user-md"></i>
+            </div>
+            <h3>Cirurgia Buco-Maxilo-Facial</h3>
+            <p>Especialidade responsável por procedimentos cirúrgicos na região da boca e face, incluindo extrações complexas, dentes inclusos e preparo para cirurgia ortognática.</p>
+            <a href="https://wa.me/556993282228" class="service-link">
+              Saiba mais <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="service-item">
+            <div class="service-number">08</div>
+            <div class="service-icon-lg">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3>Estética do Sorriso</h3>
+            <p>Procedimentos que melhoram a harmonia e aparência dos dentes e do sorriso, proporcionando mais confiança e bem-estar.</p>
+            <a href="https://wa.me/556993282228" class="service-link">
+              Saiba mais <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="service-item">
+            <div class="service-number">09</div>
+            <div class="service-icon-lg">
+              <i class="fas fa-star"></i>
+            </div>
+            <h3>Clareamento Dental</h3>
+            <p>Tratamento seguro e eficaz para melhorar a cor dos dentes, proporcionando um sorriso mais claro e saudável.</p>
+            <a href="https://wa.me/556993282228" class="service-link">
               Saiba mais <i class="fas fa-arrow-right"></i>
             </a>
           </div>
@@ -325,43 +452,145 @@
           <h2 class="section-heading">
             Profissionais <span class="text-gold">dedicados</span>
           </h2>
+          <p class="section-description">
+            Equipe composta por profissionais qualificados em constante atualização científica, 
+            atuando com diagnóstico preciso e cuidado individualizado.
+          </p>
         </div>
         
-        <div class="team-grid">
-          <div class="team-card">
+        <!-- Dra. Icris – Diretora Clínica em destaque -->
+        <div class="team-featured-wrapper">
+          <div class="team-card team-card--featured">
+            <div class="team-featured-badge">Diretora Clínica</div>
             <div class="team-image">
-              <img src="img/image.png" alt="Dra. enzo">
+              <img src="img/icris.png" alt="Dra. Icris Dayane Rodrigues Jardim">
               <div class="team-overlay">
-                <a href="https://wa.me/999999999999" class="contact-dr">
+                <a href="https://wa.me/556993282228" class="contact-dr">
                   <i class="fab fa-whatsapp"></i>
                 </a>
               </div>
             </div>
             <div class="team-info">
-              <h3>Dra. Erica Nunes</h3>
-              <span class="team-specialty">Implantodontia & Cirurgia</span>
-              <span class="team-cro">CRO-SP 45.892</span>
-              <p>Mais de 15 anos de experiência em implantes complexos e cirurgias avançadas</p>
-            </div>
-          </div>
-          
-          <div class="team-card">
-            <div class="team-image">
-              <img src="img/image1.png" alt="Dr. Andre Carrilho">
-              <div class="team-overlay">
-                <a href="https://wa.me/123" class="contact-dr">
-                  <i class="fab fa-whatsapp"></i>
-                </a>
-              </div>
-            </div>
-            <div class="team-info">
-              <h3>Dr. Andre Carrilho</h3>
-              <span class="team-specialty">Ortodontia & Estética</span>
-              <span class="team-cro">CRO-SP 52.341</span>
-              <p>Especialista em design de sorriso e ortodontia invisível certificada internacionalmente</p>
+              <h3>Dra. Icris Dayane Rodrigues Jardim</h3>
+              <span class="team-specialty">Ortodontista</span>
+              <span class="team-cro">CRO/RO 2449</span>
+              <p>Cirurgiã-dentista com atuação focada em ortodontia e planejamento ortodôntico individualizado. Mestre em Ortodontia e doutoranda em Estomatologia, com experiência clínica em tratamentos ortodônticos, alinhadores invisíveis e preparo ortodôntico para cirurgia ortognática. Atua com foco em diagnóstico preciso, planejamento digital e tratamentos baseados em evidência científica, buscando sempre oferecer resultados estéticos, funcionais e duradouros. Participa constantemente de cursos, congressos e programas de atualização científica nacionais e internacionais.</p>
             </div>
           </div>
         </div>
+
+        <!-- Grade 3+3 dos demais profissionais -->
+        <div class="team-grid team-grid--3col">
+
+          <!-- Dra. Maisa -->
+          <div class="team-card">
+            <div class="team-image">
+              <img src="img/maisa.png" alt="Dra. Maisa de Souza Melo Carrilho">
+              <div class="team-overlay">
+                <a href="https://wa.me/556993282228" class="contact-dr">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+            <div class="team-info">
+              <h3>Dra. Maisa de Souza Melo Carrilho</h3>
+              <span class="team-specialty">Clínico Geral e Ortodontista</span>
+              <span class="team-cro">CRO/RO 3330</span>
+              <p>Atendimento completo em clínica geral com especialização em ortodontia, unindo estética e função em cada planejamento.</p>
+            </div>
+          </div>
+
+          <!-- Dra. Júlia -->
+          <div class="team-card">
+            <div class="team-image">
+              <img src="img/julia.png" alt="Dra. Júlia Azevedo de Oliveira">
+              <div class="team-overlay">
+                <a href="https://wa.me/556993282228" class="contact-dr">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+            <div class="team-info">
+              <h3>Dra. Júlia Azevedo de Oliveira</h3>
+              <span class="team-specialty">Clínico Geral</span>
+              <span class="team-cro">CRO/RO 5422</span>
+              <p>Atendimento clínico geral com foco em saúde bucal preventiva e restauradora, proporcionando cuidado integral aos pacientes.</p>
+            </div>
+          </div>
+
+          <!-- Dra. Monique -->
+          <div class="team-card">
+            <div class="team-image">
+              <img src="img/monique.png" alt="Dra. Monique Brandalise Stubs">
+              <div class="team-overlay">
+                <a href="https://wa.me/556993282228" class="contact-dr">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+            <div class="team-info">
+              <h3>Dra. Monique Brandalise Stubs</h3>
+              <span class="team-specialty">Dentística</span>
+              <span class="team-cro">CRO/RO 1607</span>
+              <p>Especialista em dentística estética e restauradora, com foco em resultados naturais e harmoniosos para cada sorriso.</p>
+            </div>
+          </div>
+
+          <!-- Dr. Samuel -->
+          <div class="team-card">
+            <div class="team-image">
+              <img src="img/samuel.png" alt="Dr. Samuel Evangelista">
+              <div class="team-overlay">
+                <a href="https://wa.me/556993282228" class="contact-dr">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+            <div class="team-info">
+              <h3>Dr. Samuel Evangelista</h3>
+              <span class="team-specialty">Cirurgia e Traumatologia Bucomaxilofacial</span>
+              <span class="team-cro">CRO/RO 3147</span>
+              <p>Especialista em cirurgias complexas da face e boca, com atuação em traumatologia e procedimentos bucomaxilofaciais avançados.</p>
+            </div>
+          </div>
+
+          <!-- Dra. Daniela -->
+          <div class="team-card">
+            <div class="team-image">
+              <img src="img/daniela.png" alt="Dra. Daniela Martens">
+              <div class="team-overlay">
+                <a href="https://wa.me/556993282228" class="contact-dr">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+            <div class="team-info">
+              <h3>Dra. Daniela Martens</h3>
+              <span class="team-specialty">Cirurgia e Implantodontia</span>
+              <span class="team-cro">CRO/RO 3811</span>
+              <p>Especialista em implantes dentários e cirurgias orais, oferecendo soluções de reabilitação completa com precisão e segurança.</p>
+            </div>
+          </div>
+
+          <!-- Dr. Ueliton -->
+          <div class="team-card">
+            <div class="team-image">
+              <img src="img/ueliton.png" alt="Dr. Ueliton Sales">
+              <div class="team-overlay">
+                <a href="https://wa.me/556993282228" class="contact-dr">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+            <div class="team-info">
+              <h3>Dr. Ueliton Sales</h3>
+              <span class="team-specialty">Endodontia</span>
+              <span class="team-cro">CRO/RO 3232</span>
+              <p>Especialista em tratamento de canal com técnicas modernas e minimamente invasivas, garantindo conforto e preservação do dente natural.</p>
+            </div>
+          </div>
+
+        </div><!-- fim team-grid -->
       </div>
     </section>
 
@@ -374,33 +603,36 @@
             <span>Galeria</span>
           </div>
           <h2 class="section-heading">
-            Nossos <span class="text-gold">resultados</span>
+            Resultados que vão além da <span class="text-gold">estética</span>
           </h2>
+          <p class="section-description">
+            Sorrisos saudáveis, funcionais e confiantes — casos clínicos autorizados de antes e depois.
+          </p>
         </div>
         
         <div class="gallery-grid">
           <div class="gallery-item">
             <div class="gallery-placeholder">
               <i class="fas fa-image"></i>
-              <span>Antes & Depois</span>
+              <span>Ortodontia – Antes & Depois</span>
             </div>
           </div>
           <div class="gallery-item">
             <div class="gallery-placeholder">
               <i class="fas fa-image"></i>
-              <span>Implantes</span>
+              <span>Alinhadores Invisíveis</span>
             </div>
           </div>
           <div class="gallery-item">
             <div class="gallery-placeholder">
               <i class="fas fa-image"></i>
-              <span>Clareamento</span>
+              <span>Estética do Sorriso</span>
             </div>
           </div>
           <div class="gallery-item">
             <div class="gallery-placeholder">
               <i class="fas fa-image"></i>
-              <span>Ortodontia</span>
+              <span>Implantodontia</span>
             </div>
           </div>
         </div>
@@ -416,16 +648,14 @@
               <i class="fas fa-quote-left"></i>
             </div>
             <p class="testimonial-text">
-              "Experiência incrível do início ao fim. A equipe é extremamente 
-              profissional e o resultado superou todas as minhas expectativas. 
-              Meu sorriso nunca esteve tão bonito!"
+              "A satisfação dos nossos pacientes é o nosso maior resultado."
             </p>
             <div class="testimonial-author">
               <div class="author-avatar">
                 <i class="fas fa-user"></i>
               </div>
               <div class="author-info">
-                <h4>Carolina Alexandra</h4>
+                <h4>Avaliações Google</h4>
                 <div class="rating">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -462,7 +692,7 @@
           </h2>
           
           <p class="section-description">
-            Agende sua consulta e descubra como podemos transformar seu sorriso
+            Agende sua avaliação e descubra como podemos transformar seu sorriso
           </p>
           
           <div class="contact-info-list">
@@ -471,8 +701,8 @@
                 <i class="fas fa-phone"></i>
               </div>
               <div class="info-content">
-                <span class="info-label">Telefone</span>
-                <a href="tel:+999999999999" class="info-value">+55 69 9999-9999</a>
+                <span class="info-label">Telefone / WhatsApp</span>
+                <a href="tel:+5569932822280" class="info-value">+55 69 9328-2228</a>
               </div>
             </div>
             
@@ -482,7 +712,7 @@
               </div>
               <div class="info-content">
                 <span class="info-label">Endereço</span>
-                <span class="info-value">Rua Caladinho 32, 755<br>Porto Velho - RO</span>
+                <a href="https://maps.google.com/?q=Rua+Duque+de+Caxias,+755,+Caiari,+Porto+Velho+RO" target="_blank" class="info-value">Rua Duque de Caxias, 755, Caiari<br>Porto Velho - RO, 76801-146</a>
               </div>
             </div>
             
@@ -492,21 +722,21 @@
               </div>
               <div class="info-content">
                 <span class="info-label">Horário</span>
-                <span class="info-value">Sáb: 9h-1h | Dom: Agendamento</span>
+                <span class="info-value">Seg–Sex: 8h–18h | Sáb: 8h–12h</span>
               </div>
             </div>
           </div>
           
           <div class="emergency-box">
             <div class="emergency-icon">
-              <i class="fas fa-ambulance"></i>
+              <i class="fas fa-calendar-check"></i>
             </div>
             <div class="emergency-content">
-              <h4>Emergência 24h</h4>
-              <p>Atendimento disponível a qualquer momento</p>
-              <a href="https://wa.me/123" class="emergency-btn">
+              <h4>Agende pelo WhatsApp</h4>
+              <p>Atendimento com hora marcada, sem fila de espera</p>
+              <a href="https://wa.me/556993282228" class="emergency-btn">
                 <i class="fab fa-whatsapp"></i>
-                Chamar agora
+                Agendar agora
               </a>
             </div>
           </div>
@@ -523,11 +753,11 @@
               <i class="fas fa-tooth"></i>
               <span>OFFICEDENTE</span>
             </div>
-            <p>Transformando sorrisos, mudando vidas. Sua clínica de confiança em Porto Velho.</p>
+            <p>Transformando sorrisos com tecnologia, ciência e cuidado individualizado. Sua clínica de confiança em Porto Velho - RO.</p>
             <div class="footer-socials">
               <a href="#"><i class="fab fa-instagram"></i></a>
               <a href="#"><i class="fab fa-facebook"></i></a>
-              <a href="https://wa.me/123454"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://wa.me/556993282228"><i class="fab fa-whatsapp"></i></a>
             </div>
           </div>
           
@@ -536,40 +766,40 @@
             <ul>
               <li><a href="#hero">Início</a></li>
               <li><a href="#about">Sobre</a></li>
-              <li><a href="#services">Serviços</a></li>
+              <li><a href="#services">Especialidades</a></li>
               <li><a href="#team">Equipe</a></li>
             </ul>
           </div>
           
           <div class="footer-links">
-            <h4>Serviços</h4>
+            <h4>Especialidades</h4>
             <ul>
-              <li><a href="#services">Implantodontia</a></li>
-              <li><a href="#services">Design de Sorriso</a></li>
               <li><a href="#services">Ortodontia</a></li>
-              <li><a href="#services">Clareamento</a></li>
+              <li><a href="#services">Alinhadores Invisíveis</a></li>
+              <li><a href="#services">Implantodontia</a></li>
+              <li><a href="#services">Dentística e Estética</a></li>
             </ul>
           </div>
           
           <div class="footer-contact">
             <h4>Contato</h4>
             <ul>
-              <li><i class="fas fa-phone"></i> +55 69 9328-2228</li>
-              <li><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4f2c20213b2e3b200f202929262c2a2b2a213b2a612c2022612d3d">[email&#160;protected]</a></li>
-              <li><i class="fas fa-map-marker-alt"></i> Porto Velho - RO</li>
+              <li><i class="fas fa-phone"></i> <a href="tel:+5569932822280" style="color:inherit">+55 69 9328-2228</a></li>
+              <li><i class="fas fa-map-marker-alt"></i> <a href="https://maps.google.com/?q=Rua+Duque+de+Caxias,+755,+Caiari,+Porto+Velho+RO" target="_blank" style="color:inherit">Rua Duque de Caxias, 755, Caiari<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Porto Velho - RO, 76801-146</a></li>
+              <li><i class="fas fa-clock"></i> Seg–Sex: 8h–18h | Sáb: 8h–12h</li>
             </ul>
           </div>
         </div>
         
         <div class="footer-bottom">
-          <p>&copy; 2024 OFFICEDENTE. Todos os direitos reservados.</p>
+          <p>&copy; 2025 OFFICEDENTE. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
   </main>
 
   <!-- WhatsApp Float -->
-  <a href="https://wa.me/000000000" class="whatsapp-bubble">
+  <a href="https://wa.me/556993282228" class="whatsapp-bubble">
     <i class="fab fa-whatsapp"></i>
   </a>
 
@@ -584,10 +814,64 @@
     </div>
     <iframe 
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.2690541689794!2d-63.90639453386841!3d-8.760736921980921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92325cd9871aaaab%3A0x8c1462d80075a1f1!2sOfficedente!5e0!3m2!1spt-BR!2sbr!4v1769647875311!5m2!1spt-BR!2sbr"
-    </iframe>
+    ></iframe>
   </div>
 
-
   <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // ── 1. Fechar mapa ──────────────────────────────────────────
+      var mapFixed = document.getElementById('mapFixed');
+      var mapClose = document.getElementById('mapClose');
+      if (mapClose && mapFixed) {
+        mapClose.addEventListener('click', function (e) {
+          e.stopPropagation();
+          mapFixed.style.display = 'none';
+        });
+      }
+
+      // ── 2. Menu lateral – destaque da seção visível ─────────────
+      var menuItems = document.querySelectorAll('.sidebar-menu .menu-item');
+      var sections  = document.querySelectorAll('main section[id]');
+
+      function setActive(id) {
+        menuItems.forEach(function (item) {
+          var href = item.getAttribute('href');
+          if (href === '#' + id) {
+            item.classList.add('active');
+          } else {
+            item.classList.remove('active');
+          }
+        });
+      }
+
+      // Usa IntersectionObserver para detectar qual seção está na tela
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      }, {
+        root: null,
+        rootMargin: '-40% 0px -55% 0px', // dispara quando a seção está no centro da tela
+        threshold: 0
+      });
+
+      sections.forEach(function (section) {
+        observer.observe(section);
+      });
+
+      // Clique direto no menu também destaca imediatamente
+      menuItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+          menuItems.forEach(function (m) { m.classList.remove('active'); });
+          item.classList.add('active');
+        });
+      });
+
+    });
+  </script>
 </body>
 </html>
