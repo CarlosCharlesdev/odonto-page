@@ -1358,6 +1358,7 @@ a {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
+  top: auto;          /* garante que nunca fica no topo */
   width: 70px;
   height: 70px;
   background: #25D366;
@@ -1368,7 +1369,7 @@ a {
   color: var(--white);
   font-size: 2rem;
   box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
-  z-index: 999;
+  z-index: 1100;      /* acima de tudo, inclusive do mobile-header (z-index 1000) */
   transition: var(--transition);
   animation: bounceIn 1s ease;
 }
@@ -1376,6 +1377,12 @@ a {
 .whatsapp-bubble:hover {
   transform: scale(1.1);
   box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
+}
+
+/* Esconde o mapa caso ainda exista no HTML */
+.map-fixed,
+.map-toggle {
+  display: none !important;
 }
 
 @keyframes bounceIn {
@@ -1491,11 +1498,12 @@ a {
   }
 
   .whatsapp-bubble {
-    width: 60px;
-    height: 60px;
-    font-size: 1.75rem;
-    bottom: 1rem;
-    right: 1rem;
+    width: 55px;
+    height: 55px;
+    font-size: 1.6rem;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    top: auto;
   }
 
   .emergency-box {
