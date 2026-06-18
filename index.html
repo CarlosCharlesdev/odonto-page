@@ -8,146 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    /* ── Dra. Icris – card destaque centralizado ── */
-    .team-featured-wrapper {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 2.5rem;
-    }
-
-    .team-card--featured {
-      position: relative;
-      max-width: 480px;
-      width: 100%;
-      text-align: center;
-      border: 2px solid var(--gold, #c9a96e);
-      box-shadow: 0 8px 40px rgba(201,169,110,0.18);
-    }
-
-    .team-card--featured .team-image {
-      height: 340px;
-    }
-
-    .team-featured-badge {
-      position: absolute;
-      top: 1rem;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--gold, #c9a96e);
-      color: #fff;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.3rem 1rem;
-      border-radius: 999px;
-      z-index: 10;
-      white-space: nowrap;
-    }
-
-    .team-card--featured .team-info p {
-      font-size: 0.88rem;
-      line-height: 1.65;
-    }
-
-    /* ── Grade 3 colunas para os demais ── */
-    .team-grid--3col {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-
-    @media (max-width: 900px) {
-      .team-grid--3col {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 580px) {
-      .team-grid--3col {
-        grid-template-columns: 1fr;
-      }
-      .team-card--featured {
-        max-width: 100%;
-      }
-    }
-  </style>
-
-  <style id="floating-fix">
-    /* ── Floating elements: ícone + texto na mesma linha ── */
-    .floating-element {
-      display: flex !important;
-      flex-direction: row !important;
-      align-items: center !important;
-      gap: 0.5rem !important;
-      white-space: nowrap;
-    }
-    .floating-element .elem-icon {
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .floating-element span {
-      font-size: 0.8rem;
-      font-weight: 600;
-      line-height: 1;
-    }
-  </style>
-
-  <style id="mobile-menu-fix">
-    /* ── Sidebar aberta no mobile ── */
-    @media (max-width: 768px) {
-
-      /* Por padrão a sidebar fica fora da tela (assumindo que o style.css
-         a posiciona à esquerda ou com transform/left negativo).
-         Quando a classe open é adicionada, ela aparece. */
-      .sidebar {
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        z-index: 999;
-      }
-
-      .sidebar--mobile-open {
-        transform: translateX(0) !important;
-      }
-
-      /* Overlay escuro por trás da sidebar aberta */
-      .sidebar--mobile-open::before {
-        content: '';
-        position: fixed;
-        inset: 0;
-        background: rgba(0,0,0,0.45);
-        z-index: -1;
-      }
-
-      /* Animação do hamburger → X */
-      .hamburger.open span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-      }
-      .hamburger.open span:nth-child(2) {
-        opacity: 0;
-        transform: scaleX(0);
-      }
-      .hamburger.open span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-      }
-
-      .hamburger span {
-        transition: transform 0.3s ease, opacity 0.2s ease;
-        display: block;
-      }
-    }
-  </style>
 </head>
 <body>
-  
+
   <!-- Cursor Personalizado -->
   <div class="custom-cursor"></div>
   <div class="custom-cursor-follower"></div>
@@ -159,7 +22,7 @@
         <i class="fas fa-tooth"></i>
       </div>
     </div>
-    
+
     <ul class="sidebar-menu">
       <li><a href="#hero" class="menu-item active" data-text="Início"><i class="fas fa-home"></i></a></li>
       <li><a href="#about" class="menu-item" data-text="Sobre"><i class="fas fa-info-circle"></i></a></li>
@@ -168,7 +31,7 @@
       <li><a href="#gallery" class="menu-item" data-text="Galeria"><i class="fas fa-images"></i></a></li>
       <li><a href="#contact" class="menu-item" data-text="Contato"><i class="fas fa-envelope"></i></a></li>
     </ul>
-    
+
     <div class="sidebar-social">
       <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
       <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
@@ -191,7 +54,7 @@
 
   <!-- Main Content -->
   <main class="main-content">
-    
+
     <!-- Hero Section -->
     <section class="hero" id="hero">
       <div class="hero-grid">
@@ -200,19 +63,19 @@
             <span class="tag-dot"></span>
             Atendimento com hora marcada
           </div>
-          
+
           <h1 class="hero-heading">
             Transformando sorrisos com
             <span class="heading-highlight">tecnologia, ciência</span>
             e cuidado individualizado
           </h1>
-          
+
           <p class="hero-text">
-            Na Officedente, cada tratamento é planejado de forma personalizada, 
-            utilizando tecnologia moderna e protocolos científicos para oferecer 
+            Na Officedente, cada tratamento é planejado de forma personalizada,
+            utilizando tecnologia moderna e protocolos científicos para oferecer
             resultados estéticos, funcionais e duradouros.
           </p>
-          
+
           <div class="hero-cta">
             <a href="https://wa.me/556993282228" class="btn-primary">
               <span>Agendar Avaliação</span>
@@ -225,7 +88,7 @@
               <i class="fas fa-arrow-down"></i>
             </a>
           </div>
-          
+
           <div class="hero-metrics">
             <div class="metric">
               <div class="metric-value">980+</div>
@@ -241,7 +104,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="hero-right">
           <div class="hero-image-wrapper">
             <div class="floating-element elem-1">
@@ -282,19 +145,19 @@
               <div class="label-line"></div>
               <span>Sobre nós</span>
             </div>
-            
+
             <h2 class="section-heading">
-              Excelência em 
+              Excelência em
               <span class="text-gold">odontologia</span>
             </h2>
-            
+
             <p class="section-description">
-              A Officedente é uma clínica odontológica que une tecnologia, planejamento 
-              personalizado e atendimento humanizado para proporcionar tratamentos de alta 
-              qualidade e resultados previsíveis. Nosso objetivo é cuidar da saúde, da função 
+              A Officedente é uma clínica odontológica que une tecnologia, planejamento
+              personalizado e atendimento humanizado para proporcionar tratamentos de alta
+              qualidade e resultados previsíveis. Nosso objetivo é cuidar da saúde, da função
               e da estética do sorriso, sempre respeitando as necessidades individuais de cada paciente.
             </p>
-            
+
             <div class="features-grid">
               <div class="feature-box">
                 <div class="feature-icon-wrapper">
@@ -303,7 +166,7 @@
                 <h3>Tecnologia a Favor do Seu Sorriso</h3>
                 <p>Diagnóstico preciso, planejamento digital e tratamentos modernos para mais conforto, segurança e previsibilidade</p>
               </div>
-              
+
               <div class="feature-box">
                 <div class="feature-icon-wrapper">
                   <i class="fas fa-user-md"></i>
@@ -311,7 +174,7 @@
                 <h3>Equipe Especializada</h3>
                 <p>Profissionais qualificados em constante atualização científica nacional e internacional</p>
               </div>
-              
+
               <div class="feature-box">
                 <div class="feature-icon-wrapper">
                   <i class="fas fa-heart"></i>
@@ -319,7 +182,7 @@
                 <h3>Atendimento Humanizado</h3>
                 <p>Cuidado personalizado respeitando as necessidades individuais de cada paciente</p>
               </div>
-              
+
               <div class="feature-box">
                 <div class="feature-icon-wrapper">
                   <i class="fas fa-certificate"></i>
@@ -329,7 +192,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="about-visual">
             <div class="visual-grid">
               <div class="visual-item item-large">
@@ -372,119 +235,83 @@
             Odontologia completa <span class="text-gold">em um só lugar</span>
           </h2>
           <p class="section-description">
-            Na Officedente você encontra diferentes especialidades odontológicas, permitindo 
+            Na Officedente você encontra diferentes especialidades odontológicas, permitindo
             um atendimento integrado e planejamento completo para cada paciente.
           </p>
         </div>
-        
+
         <div class="services-masonry">
           <div class="service-item">
             <div class="service-number">01</div>
-            <div class="service-icon-lg">
-              <i class="fas fa-teeth"></i>
-            </div>
+            <div class="service-icon-lg"><i class="fas fa-teeth"></i></div>
             <h3>Ortodontia</h3>
             <p>Tratamento para correção do posicionamento dos dentes e da mordida, melhorando estética, função mastigatória e saúde bucal.</p>
-            <a href="https://wa.me/556993282228" class="service-link">
-              Saiba mais <i class="fas fa-arrow-right"></i>
-            </a>
+            <a href="https://wa.me/556993282228" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
           </div>
-          
+
           <div class="service-item featured">
             <div class="featured-badge">Mais procurado</div>
             <div class="service-number">02</div>
-            <div class="service-icon-lg">
-              <i class="fas fa-smile-beam"></i>
-            </div>
+            <div class="service-icon-lg"><i class="fas fa-smile-beam"></i></div>
             <h3>Alinhadores Invisíveis</h3>
             <p>Tratamento ortodôntico moderno e discreto que utiliza alinhadores transparentes e removíveis para alinhar os dentes com conforto e previsibilidade.</p>
-            <a href="https://wa.me/556993282228" class="service-link">
-              Saiba mais <i class="fas fa-arrow-right"></i>
-            </a>
+            <a href="https://wa.me/556993282228" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
           </div>
-          
+
           <div class="service-item">
             <div class="service-number">03</div>
-            <div class="service-icon-lg">
-              <i class="fas fa-child"></i>
-            </div>
+            <div class="service-icon-lg"><i class="fas fa-child"></i></div>
             <h3>Ortodontia Preventiva e Interceptativa</h3>
             <p>Tratamentos realizados em crianças para orientar o crescimento e desenvolvimento adequado dos ossos e dentes.</p>
-            <a href="https://wa.me/556993282228" class="service-link">
-              Saiba mais <i class="fas fa-arrow-right"></i>
-            </a>
+            <a href="https://wa.me/556993282228" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
           </div>
-          
+
           <div class="service-item">
             <div class="service-number">04</div>
-            <div class="service-icon-lg">
-              <i class="fas fa-tooth"></i>
-            </div>
+            <div class="service-icon-lg"><i class="fas fa-tooth"></i></div>
             <h3>Implantodontia</h3>
             <p>Especialidade responsável pela reabilitação de dentes perdidos por meio de implantes dentários, devolvendo função mastigatória e estética ao sorriso.</p>
-            <a href="https://wa.me/556993282228" class="service-link">
-              Saiba mais <i class="fas fa-arrow-right"></i>
-            </a>
+            <a href="https://wa.me/556993282228" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
           </div>
-          
+
           <div class="service-item">
             <div class="service-number">05</div>
-            <div class="service-icon-lg">
-              <i class="fas fa-syringe"></i>
-            </div>
+            <div class="service-icon-lg"><i class="fas fa-syringe"></i></div>
             <h3>Endodontia</h3>
             <p>Tratamento de canal realizado para tratar infecções ou inflamações na polpa dentária, preservando o dente natural.</p>
-            <a href="https://wa.me/556993282228" class="service-link">
-              Saiba mais <i class="fas fa-arrow-right"></i>
-            </a>
+            <a href="https://wa.me/556993282228" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
           </div>
-          
+
           <div class="service-item">
             <div class="service-number">06</div>
-            <div class="service-icon-lg">
-              <i class="fas fa-heartbeat"></i>
-            </div>
+            <div class="service-icon-lg"><i class="fas fa-heartbeat"></i></div>
             <h3>Periodontia</h3>
             <p>Tratamento e prevenção das doenças da gengiva e dos tecidos que sustentam os dentes, como gengivite e periodontite.</p>
-            <a href="https://wa.me/556993282228" class="service-link">
-              Saiba mais <i class="fas fa-arrow-right"></i>
-            </a>
+            <a href="https://wa.me/556993282228" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
           </div>
 
           <div class="service-item">
             <div class="service-number">07</div>
-            <div class="service-icon-lg">
-              <i class="fas fa-user-md"></i>
-            </div>
+            <div class="service-icon-lg"><i class="fas fa-user-md"></i></div>
             <h3>Cirurgia Buco-Maxilo-Facial</h3>
             <p>Especialidade responsável por procedimentos cirúrgicos na região da boca e face, incluindo extrações complexas, dentes inclusos e preparo para cirurgia ortognática.</p>
-            <a href="https://wa.me/556993282228" class="service-link">
-              Saiba mais <i class="fas fa-arrow-right"></i>
-            </a>
+            <a href="https://wa.me/556993282228" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
           </div>
 
           <div class="service-item">
             <div class="service-number">08</div>
-            <div class="service-icon-lg">
-              <i class="fas fa-paint-brush"></i>
-            </div>
+            <div class="service-icon-lg"><i class="fas fa-paint-brush"></i></div>
             <h3>Estética do Sorriso</h3>
             <p>Procedimentos que melhoram a harmonia e aparência dos dentes e do sorriso, proporcionando mais confiança e bem-estar.</p>
-            <a href="https://wa.me/556993282228" class="service-link">
-              Saiba mais <i class="fas fa-arrow-right"></i>
-            </a>
+            <a href="https://wa.me/556993282228" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
           </div>
 
           <div class="service-item">
             <div class="service-number">09</div>
-            <div class="service-icon-lg">
-              <i class="fas fa-star"></i>
-            </div>
+            <div class="service-icon-lg"><i class="fas fa-star"></i></div>
             <h3>Clareamento Dental</h3>
             <p>Tratamento seguro e eficaz para melhorar a cor dos dentes, proporcionando um sorriso mais claro e saudável.</p>
-            <a href="https://wa.me/556993282228" class="service-link">
-              Saiba mais <i class="fas fa-arrow-right"></i>
-            </a>
+            <a href="https://wa.me/556993282228" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
@@ -502,11 +329,11 @@
             Profissionais <span class="text-gold">dedicados</span>
           </h2>
           <p class="section-description">
-            Equipe composta por profissionais qualificados em constante atualização científica, 
+            Equipe composta por profissionais qualificados em constante atualização científica,
             atuando com diagnóstico preciso e cuidado individualizado.
           </p>
         </div>
-        
+
         <!-- Dra. Icris – Diretora Clínica em destaque -->
         <div class="team-featured-wrapper">
           <div class="team-card team-card--featured">
@@ -528,17 +355,14 @@
           </div>
         </div>
 
-        <!-- Grade 3+3 dos demais profissionais -->
+        <!-- Grade 3 colunas para os demais profissionais -->
         <div class="team-grid team-grid--3col">
 
-          <!-- Dra. Maisa -->
           <div class="team-card">
             <div class="team-image">
               <img src="img/maisa.png" alt="Dra. Maisa de Souza Melo Carrilho">
               <div class="team-overlay">
-                <a href="https://wa.me/556993282228" class="contact-dr">
-                  <i class="fab fa-whatsapp"></i>
-                </a>
+                <a href="https://wa.me/556993282228" class="contact-dr"><i class="fab fa-whatsapp"></i></a>
               </div>
             </div>
             <div class="team-info">
@@ -549,14 +373,11 @@
             </div>
           </div>
 
-          <!-- Dra. Júlia -->
           <div class="team-card">
             <div class="team-image">
               <img src="img/julia.png" alt="Dra. Júlia Azevedo de Oliveira">
               <div class="team-overlay">
-                <a href="https://wa.me/556993282228" class="contact-dr">
-                  <i class="fab fa-whatsapp"></i>
-                </a>
+                <a href="https://wa.me/556993282228" class="contact-dr"><i class="fab fa-whatsapp"></i></a>
               </div>
             </div>
             <div class="team-info">
@@ -567,14 +388,11 @@
             </div>
           </div>
 
-          <!-- Dra. Monique -->
           <div class="team-card">
             <div class="team-image">
               <img src="img/monique.png" alt="Dra. Monique Brandalise Stubs">
               <div class="team-overlay">
-                <a href="https://wa.me/556993282228" class="contact-dr">
-                  <i class="fab fa-whatsapp"></i>
-                </a>
+                <a href="https://wa.me/556993282228" class="contact-dr"><i class="fab fa-whatsapp"></i></a>
               </div>
             </div>
             <div class="team-info">
@@ -585,14 +403,11 @@
             </div>
           </div>
 
-          <!-- Dr. Samuel -->
           <div class="team-card">
             <div class="team-image">
               <img src="img/samuel.png" alt="Dr. Samuel Evangelista">
               <div class="team-overlay">
-                <a href="https://wa.me/556993282228" class="contact-dr">
-                  <i class="fab fa-whatsapp"></i>
-                </a>
+                <a href="https://wa.me/556993282228" class="contact-dr"><i class="fab fa-whatsapp"></i></a>
               </div>
             </div>
             <div class="team-info">
@@ -603,14 +418,11 @@
             </div>
           </div>
 
-          <!-- Dra. Daniela -->
           <div class="team-card">
             <div class="team-image">
               <img src="img/daniela.png" alt="Dra. Daniela Martens">
               <div class="team-overlay">
-                <a href="https://wa.me/556993282228" class="contact-dr">
-                  <i class="fab fa-whatsapp"></i>
-                </a>
+                <a href="https://wa.me/556993282228" class="contact-dr"><i class="fab fa-whatsapp"></i></a>
               </div>
             </div>
             <div class="team-info">
@@ -621,14 +433,11 @@
             </div>
           </div>
 
-          <!-- Dr. Ueliton -->
           <div class="team-card">
             <div class="team-image">
               <img src="img/ueliton.png" alt="Dr. Ueliton Sales">
               <div class="team-overlay">
-                <a href="https://wa.me/556993282228" class="contact-dr">
-                  <i class="fab fa-whatsapp"></i>
-                </a>
+                <a href="https://wa.me/556993282228" class="contact-dr"><i class="fab fa-whatsapp"></i></a>
               </div>
             </div>
             <div class="team-info">
@@ -639,7 +448,7 @@
             </div>
           </div>
 
-        </div><!-- fim team-grid -->
+        </div>
       </div>
     </section>
 
@@ -658,7 +467,7 @@
             Sorrisos saudáveis, funcionais e confiantes — casos clínicos autorizados de antes e depois.
           </p>
         </div>
-        
+
         <div class="gallery-grid">
           <div class="gallery-item">
             <div class="gallery-placeholder">
@@ -716,7 +525,7 @@
               <i class="fab fa-google google-icon"></i>
             </div>
           </div>
-          
+
           <div class="testimonials-nav">
             <button class="nav-btn" id="prevTest"><i class="fas fa-chevron-left"></i></button>
             <div class="nav-dots" id="testDots"></div>
@@ -734,48 +543,44 @@
             <div class="label-line"></div>
             <span>Entre em contato</span>
           </div>
-          
+
           <h2 class="section-heading">
             Vamos cuidar do seu
             <span class="text-gold">sorriso</span>
           </h2>
-          
+
           <p class="section-description">
             Agende sua avaliação e descubra como podemos transformar seu sorriso
           </p>
-          
+
           <div class="contact-info-list">
             <div class="contact-info-item">
-              <div class="info-icon">
-                <i class="fas fa-phone"></i>
-              </div>
+              <div class="info-icon"><i class="fas fa-phone"></i></div>
               <div class="info-content">
                 <span class="info-label">Telefone / WhatsApp</span>
                 <a href="tel:+5569932822280" class="info-value">+55 69 9328-2228</a>
               </div>
             </div>
-            
+
             <div class="contact-info-item">
-              <div class="info-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
+              <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
               <div class="info-content">
                 <span class="info-label">Endereço</span>
-                <a href="https://maps.google.com/?q=Rua+Duque+de+Caxias,+755,+Caiari,+Porto+Velho+RO" target="_blank" class="info-value">Rua Duque de Caxias, 755, Caiari<br>Porto Velho - RO, 76801-146</a>
+                <a href="https://maps.google.com/?q=Rua+Duque+de+Caxias,+755,+Caiari,+Porto+Velho+RO" target="_blank" class="info-value">
+                  Rua Duque de Caxias, 755, Caiari<br>Porto Velho - RO, 76801-146
+                </a>
               </div>
             </div>
-            
+
             <div class="contact-info-item">
-              <div class="info-icon">
-                <i class="fas fa-clock"></i>
-              </div>
+              <div class="info-icon"><i class="fas fa-clock"></i></div>
               <div class="info-content">
                 <span class="info-label">Horário</span>
                 <span class="info-value">Seg–Sex: 8h–18h | Sáb: 8h–12h</span>
               </div>
             </div>
           </div>
-          
+
           <div class="emergency-box">
             <div class="emergency-icon">
               <i class="fas fa-calendar-check"></i>
@@ -809,7 +614,7 @@
               <a href="https://wa.me/556993282228"><i class="fab fa-whatsapp"></i></a>
             </div>
           </div>
-          
+
           <div class="footer-links">
             <h4>Links Rápidos</h4>
             <ul>
@@ -819,7 +624,7 @@
               <li><a href="#team">Equipe</a></li>
             </ul>
           </div>
-          
+
           <div class="footer-links">
             <h4>Especialidades</h4>
             <ul>
@@ -829,22 +634,31 @@
               <li><a href="#services">Dentística e Estética</a></li>
             </ul>
           </div>
-          
+
           <div class="footer-contact">
             <h4>Contato</h4>
             <ul>
-              <li><i class="fas fa-phone"></i> <a href="tel:+5569932822280" style="color:inherit">+55 69 9328-2228</a></li>
-              <li><i class="fas fa-map-marker-alt"></i> <a href="https://maps.google.com/?q=Rua+Duque+de+Caxias,+755,+Caiari,+Porto+Velho+RO" target="_blank" style="color:inherit">Rua Duque de Caxias, 755, Caiari<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Porto Velho - RO, 76801-146</a></li>
+              <li>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+5569932822280" style="color:inherit">+55 69 9328-2228</a>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <a href="https://maps.google.com/?q=Rua+Duque+de+Caxias,+755,+Caiari,+Porto+Velho+RO" target="_blank" style="color:inherit">
+                  Rua Duque de Caxias, 755, Caiari<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Porto Velho - RO, 76801-146
+                </a>
+              </li>
               <li><i class="fas fa-clock"></i> Seg–Sex: 8h–18h | Sáb: 8h–12h</li>
             </ul>
           </div>
         </div>
-        
+
         <div class="footer-bottom">
           <p>&copy; 2025 OFFICEDENTE. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
+
   </main>
 
   <!-- WhatsApp Float -->
@@ -852,25 +666,11 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- Mapa Fixo - Canto Inferior Direito -->
-  <div class="map-fixed" id="mapFixed">
-    <div class="map-header">
-      <i class="fas fa-map-marker-alt"></i>
-      <span>Nossa Localização</span>
-      <button class="map-close" id="mapClose">
-        <i class="fas fa-times"></i>
-      </button>
-    </div>
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.2690541689794!2d-63.90639453386841!3d-8.760736921980921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92325cd9871aaaab%3A0x8c1462d80075a1f1!2sOfficedente!5e0!3m2!1spt-BR!2sbr!4v1769647875311!5m2!1spt-BR!2sbr"
-    ></iframe>
-  </div>
-
   <script src="script.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
 
-      // ── 0. Menu Mobile (hamburger) ──────────────────────────────────
+      // Menu Mobile (hamburger)
       var hamburger = document.getElementById('hamburger');
       var sidebar   = document.querySelector('.sidebar');
 
@@ -880,7 +680,6 @@
           sidebar.classList.toggle('sidebar--mobile-open');
         });
 
-        // Fecha o menu ao clicar em qualquer item da sidebar
         document.querySelectorAll('.sidebar-menu .menu-item').forEach(function (link) {
           link.addEventListener('click', function () {
             hamburger.classList.remove('open');
@@ -888,7 +687,6 @@
           });
         });
 
-        // Fecha ao clicar fora da sidebar
         document.addEventListener('click', function (e) {
           if (
             sidebar.classList.contains('sidebar--mobile-open') &&
@@ -901,49 +699,28 @@
         });
       }
 
-      // ── 1. Fechar mapa ──────────────────────────────────────────
-      var mapFixed = document.getElementById('mapFixed');
-      var mapClose = document.getElementById('mapClose');
-      if (mapClose && mapFixed) {
-        mapClose.addEventListener('click', function (e) {
-          e.stopPropagation();
-          mapFixed.style.display = 'none';
-        });
-      }
-
-      // ── 2. Menu lateral – destaque da seção visível ─────────────
+      // Menu lateral – destaque da seção visível
       var menuItems = document.querySelectorAll('.sidebar-menu .menu-item');
       var sections  = document.querySelectorAll('main section[id]');
 
       function setActive(id) {
         menuItems.forEach(function (item) {
-          var href = item.getAttribute('href');
-          if (href === '#' + id) {
-            item.classList.add('active');
-          } else {
-            item.classList.remove('active');
-          }
+          item.classList.toggle('active', item.getAttribute('href') === '#' + id);
         });
       }
 
-      // Usa IntersectionObserver para detectar qual seção está na tela
       var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            setActive(entry.target.id);
-          }
+          if (entry.isIntersecting) setActive(entry.target.id);
         });
       }, {
         root: null,
-        rootMargin: '-40% 0px -55% 0px', // dispara quando a seção está no centro da tela
+        rootMargin: '-40% 0px -55% 0px',
         threshold: 0
       });
 
-      sections.forEach(function (section) {
-        observer.observe(section);
-      });
+      sections.forEach(function (section) { observer.observe(section); });
 
-      // Clique direto no menu também destaca imediatamente
       menuItems.forEach(function (item) {
         item.addEventListener('click', function () {
           menuItems.forEach(function (m) { m.classList.remove('active'); });
